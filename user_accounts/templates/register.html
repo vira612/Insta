@@ -1,0 +1,10 @@
+
+<h3>Register Page</h3>
+<form method="POST" action="">
+	{% csrf_token %}
+	<div>Username : {{form.username}}</div> <br>
+	<div>Password : {{form.password1}} </div><br>
+	<div>Re-type Password : {{form.password2}}</div> <br>
+	<input type="submit" value="Register">
+	{{form.errors}}
+</form>

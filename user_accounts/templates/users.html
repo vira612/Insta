@@ -1,0 +1,24 @@
+<h3>User : <a href="/user/{{user}}">{{user}}</a></h3>
+
+<ul>
+	
+	{% for u1 in user1 %}
+	<li>
+		
+		<form method="POST" action="">
+
+		{% csrf_token %}
+		<p>
+		<a href = "/user/{{u1}}">{{u1}}</a> <br>
+		<input type="hidden" id="id_username" name ="username"  value = "{{user}}">
+		<input type="hidden" id="id_other_user" name ="other_user"  value = "{{u1}}">
+		<input type='submit' value='follow'>
+		</p>
+		{{form.errors}}
+		</form>
+	</li>
+	{% endfor %}
+</ul>
+
+
+<a href="/dashboard/{{user}}">Dashboard</a>

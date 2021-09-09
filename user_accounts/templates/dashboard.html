@@ -1,0 +1,19 @@
+<h3>User : <a href="/user/{{user}}">{{user}}</a></h3>
+
+
+<h4><a href = "/allusers/{{user}}">all users</a></h4>
+<div>
+
+{% for p in posts %}
+{% for post in p%}
+<form method="POST">
+{% csrf_token %}
+<h4>Post by : {{post.username}}</h4>	
+<img src="{{post.image}}" style="width:200px;height:200px;">
+<h4>{{post.description}}</h4>
+<h4>Likes : {{post.likes}} <input type="hidden" id="id_id" name ="id"  value = "{{post.id}}"> <br> <input type ="submit" value = "Like"></h4> 
+</form>
+{% endfor %}
+{% endfor %}
+
+</div>

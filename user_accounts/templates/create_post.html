@@ -1,0 +1,18 @@
+<h3>Create post here</h3>
+
+
+<form method="POST" action="">
+	{% csrf_token %}
+	<!-- <table> -->
+	<p>
+	<label for="id_image">Image:</label>
+	<input name = "image" id = "id_image" type="text" placeholder="Add photo link" > 
+	</p>
+	<p>
+	<label for="id_description">Description:</label>
+	<input name = "description" id = "id_description" type="text" placeholder="Add description" >
+	</p>
+	<input type="submit" value="CreatPost">
+	<!-- </table> -->
+	{{form.errors}}
+</form>
